@@ -1,5 +1,5 @@
 import Create from "../assets/Lab_05/create.png";
-// import EditUserModal from "./Toggle.jsx";
+import EditUserModal from "./Toggle.jsx";
 // import ModalAdd from "./ModalAdd.jsx";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -78,7 +78,18 @@ export default function Dashboard() {
                                   </button> } />
               
           </DataTable>
-          
+          <EditUserModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              user={selectedCustomer}
+              onSave={(updatedCustomer) => {
+                const updatedList = customers.map((c) =>
+                  c.id === updatedCustomer.id ? updatedCustomer : c
+                );
+                setCustomers(updatedList);
+                setIsModalOpen(false);
+              }}
+            />
           
           <span className="block ml-7 text-sm text-gray-500">{customers.length} results</span>
       </div>
