@@ -1,0 +1,19 @@
+.p-calendar .p-datepicker-trigger {
+    color: #333;
+  }
+  .p-datepicker {
+    z-index: 9999 !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+  }
+  .p-dialog-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }

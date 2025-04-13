@@ -3,7 +3,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Calendar } from 'primereact/calendar';
 import { Button } from 'primereact/button';
-// import "../css/Toggle.css"
+import "../css/Toggle.css"
 
 const AddUserModal = ({ isOpen, onClose, onAdd }) => {
   const [formData, setFormData] = useState({
@@ -49,8 +49,8 @@ const AddUserModal = ({ isOpen, onClose, onAdd }) => {
 
   const footer = (
     <div className="flex justify-end gap-2 p-2 text-white font-medium">
-      <Button label="Cancel" icon="pi pi-times"  onClick={onClose} />
-      <Button label="Add" icon="pi pi-plus"  onClick={handleSubmit} />
+      <Button label="Cancel" icon="pi pi-times" className="p-button-secondary bg-red-600 p-1 rounded-md m-1" onClick={onClose} />
+      <Button label="Add" icon="pi pi-plus" className="p-button-success bg-green-600 p-1 rounded-md m-1" onClick={handleSubmit} />
     </div>
   );
 
@@ -67,17 +67,17 @@ const AddUserModal = ({ isOpen, onClose, onAdd }) => {
       <div className="flex flex-col gap-3">
         <div>
           <label className="block mb-1">Name</label>
-          <InputText name="Name" value={formData.Name} onChange={handleChange} />
+          <InputText name="Name" value={formData.Name} onChange={handleChange}  className='border-0 shadow-2xs p-0.5 bg-gray-50'/>
         </div>
 
         <div>
           <label className="block mb-1">Company</label>
-          <InputText name="Company" value={formData.Company} onChange={handleChange}/>
+          <InputText name="Company" value={formData.Company} onChange={handleChange} className='border-0 shadow-2xs p-0.5 bg-gray-50'/>
         </div>
 
         <div>
           <label className="block mb-1">Order Value</label>
-          <InputText name="Ordervalue" value={formData.Ordervalue} onChange={handleChange} />
+          <InputText name="Ordervalue" value={formData.Ordervalue} onChange={handleChange} className='border-0 shadow-2xs p-0.5 bg-gray-50' />
         </div>
 
         <div>
@@ -93,7 +93,7 @@ const AddUserModal = ({ isOpen, onClose, onAdd }) => {
 
         <div>
           <label className="block mb-1">Avatar URL</label>
-          <InputText name="avatar" value={formData.avatar} onChange={handleChange}  />
+          <InputText name="avatar" value={formData.avatar} onChange={handleChange} className='border-0 shadow-2xs p-0.5 bg-gray-50' />
         </div>
       </div>
     </Dialog>
