@@ -4,13 +4,19 @@ import '../css/Layout.css';
 import Header from "./Header";
 import Menu from "./Menu";
 import Dashboard from "../assets/Lab_05/Squares four 1.png";
-// import Overview from "./Overview";
+import Overview from "./Overview";
 import Create from "../assets/Lab_05/create.png";
 // import EditUserModal from "./Toggle.jsx";
 // import ModalAdd from "./ModalAdd.jsx";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        fetch("https://67cd2e68dd7651e464ed8f46.mockapi.io/api/v1/jasgjkasl")
+            .then((response) => response.json())
+            .then((pre) => setData(pre));
+    },[]);
     return(
         <div className="container">
             <div className="header">
@@ -22,7 +28,7 @@ export default function Layout() {
                     </h2>
                 </div>
                 <div className="grid grid-cols-3 p-5  m-5">
-                    {/* <Overview data={data} /> */}
+                    <Overview data={data} />
                 </div>
             </div>
             <div className="menu">
