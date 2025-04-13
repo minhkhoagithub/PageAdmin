@@ -48,8 +48,8 @@ const ToggleToggle = ({ isOpen, onClose, user, onSave }) => {
 
   const footer = (
     <div className="flex justify-end gap-2 p-2 text-white font-medium">
-      <Button label="Cancel" icon="pi pi-times"  onClick={onClose} />
-      <Button label="Save" icon="pi pi-check"  onClick={handleSubmit} />
+      <Button label="Cancel" icon="pi pi-times"  onClick={onClose} className='text-black'/>
+      <Button label="Save" icon="pi pi-check"  onClick={handleSubmit} className='text-black' />
     </div>
   );
 
