@@ -1,6 +1,6 @@
 import Create from "../assets/Lab_05/create.png";
 import EditUserModal from "./Toggle.jsx";
-// import ModalAdd from "./ModalAdd.jsx";
+import ModalAdd from "./ModalAdd.jsx";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 // import { Button } from "primereact/button";
@@ -58,7 +58,11 @@ export default function Dashboard() {
   return(
       <div className="dashboard">
          <div className="relative h-4"> <button className="absolute right-10 bg-green-600 text-white font-bold  rounded-lg pl-4 pr-4" onClick={() => setIsAddOpen(true)}>Add</button></div>
-            
+         <ModalAdd
+                isOpen={isAddOpen}
+                onClose={() => setIsAddOpen(false)}
+                onAdd={handleAddUser}
+              />
           <DataTable
               value={customers}
               paginator
