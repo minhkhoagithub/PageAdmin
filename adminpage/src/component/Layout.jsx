@@ -36,8 +36,7 @@ export default function Layout() {
                 <Menu/>
             </div>
             <div className="content">
-              {/* <Outlet/> */}
-              <Dashboard/>
+              <Outlet/>
             </div>
 
         </div>
