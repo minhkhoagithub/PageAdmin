@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import '../css/Layout.css';
 import Header from "./Header";
 import Menu from "./Menu";
-import Dashboard from "../assets/Lab_05/Squares four 1.png";
+import Squares from "../assets/Lab_05/Squares four 1.png";
+import Dashboard from "./Dashboard.jsx";
 import Overview from "./Overview";
 import Create from "../assets/Lab_05/create.png";
 // import EditUserModal from "./Toggle.jsx";
@@ -22,7 +23,7 @@ export default function Layout() {
             <div className="header">
                 <Header/>
                 <div className="font-bold text-xl ml-1.5 text-left flex justify-items-center-safe p-2 gap-2 mt-3">
-                    <img src={Dashboard} alt="" className="w-5 h-5 justify-items-center mt-1 " />
+                    <img src={Squares} alt="" className="w-5 h-5 justify-items-center mt-1 " />
                     <h2>
                         Overview
                     </h2>
@@ -36,6 +37,7 @@ export default function Layout() {
             </div>
             <div className="content">
               {/* <Outlet/> */}
+              <Dashboard/>
             </div>
 
         </div>
